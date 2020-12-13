@@ -27,7 +27,7 @@ function YamahaMusiccast_update() {
 	$cron = cron::byClassAndFunction('YamahaMusiccast', 'socket_start');
 	if (!is_object($cron)) {
 		$cron = new cron();
-		$cron->setClass('YamahaMusiccast');
+		$cron->setClass('YamahaMusiccastPfr');
 		$cron->setFunction('socket_start');
 		$cron->setEnable(1);
 		$cron->setDeamon(1);
@@ -36,21 +36,21 @@ function YamahaMusiccast_update() {
 		$cron->setSchedule('* * * * *');
 		$cron->save();
 	}
-	$port = config::byKey('socket.port', 'YamahaMusiccast');
+	$port = config::byKey('socket.port', 'YamahaMusiccastPfr');
 	if (empty($port)) {
-		config::save('socket.port', 9999, 'YamahaMusiccast');
+		config::save('socket.port', 9999, 'YamahaMusiccastPfr');
 	}
-	$name = config::byKey('socket.name', 'YamahaMusiccast');
+	$name = config::byKey('socket.name', 'YamahaMusiccastPfr');
 	if (empty($name)) {
-		config::save('socket.name', 'musiccastDom', 'YamahaMusiccast');
+		config::save('socket.name', 'musiccastDom', 'YamahaMusiccastPfr');
 	}
-	foreach (YamahaMusiccast::byType('YamahaMusiccast') as $device) {
+	foreach (YamahaMusiccast::byType('YamahaMusiccastPfr') as $device) {
 		$device->save();
 	}
 }
 
 function YamahaMusiccast_remove() {
-	$cron = cron::byClassAndFunction('YamahaMusiccast', 'socket_start');
+	$cron = cron::byClassAndFunction('YamahaMusiccastPfr', 'socket_start');
 	if (is_object($cron)) {
 		$cron->remove();
 	}
