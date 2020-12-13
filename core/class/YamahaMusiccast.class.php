@@ -775,11 +775,11 @@ class YamahaMusiccast extends eqLogic {
 		$data = "M-SEARCH * HTTP/1.1\r\n";
 		$data .= "HOST: $ipCast:$port\r\n";
 		$data .= "MAN: \"ssdp:discover\"\r\n";
-		$data .= "MX: 3\r\n";
+		$data .= "MX: 1\r\n";
 		$data .= "ST: urn:schemas-upnp-org:device:MediaRenderer:1\r\n";
 
 		socket_sendto($sock, $data, strlen($data), null, $ipCast, $port);
-		log::add(__CLASS__, 'debug', 'Sending data ' . $data);
+		log::add(__CLASS__, 'debug', 'Sending ' . $data->getName());
 		$read = [$sock];
 		$write = [];
 		$except = [];
