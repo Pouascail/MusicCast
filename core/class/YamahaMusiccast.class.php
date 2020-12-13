@@ -789,6 +789,7 @@ class YamahaMusiccast extends eqLogic {
 
 		$response = "";
 		while (socket_select($read, $write, $except, 1)) {
+			log::add(__CLASS__, 'debug', 'socket_recvfrom');
 			socket_recvfrom($sock, $tmp, 4096, null, $name, $port);
 			$response .= $tmp;
 		}
