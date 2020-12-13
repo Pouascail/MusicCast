@@ -36,11 +36,11 @@ function YamahaMusiccast_update() {
 		$cron->setSchedule('* * * * *');
 		$cron->save();
 	}
-	$port = config::byKey('socket.port', 'YamahaMusiccastPfr');
+	$port = config::byKey('socket.port', 'YamahaMusiccast');
 	if (empty($port)) {
-		config::save('socket.port', 9999, 'YamahaMusiccastPfr');
+		config::save('socket.port', 9999, 'YamahaMusiccast');
 	}
-	$name = config::byKey('socket.name', 'YamahaMusiccastPfr');
+	$name = config::byKey('socket.name', 'YamahaMusiccast');
 	if (empty($name)) {
 		config::save('socket.name', 'musiccastDom', 'YamahaMusiccast');
 	}
