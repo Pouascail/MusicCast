@@ -1,0 +1,33 @@
+{
+	"plugins\/YamahaMusiccast\/desktop\/php\/YamahaMusiccast.php": {
+		"Action": "Action",
+		"Activer": "Activate",
+		"Ajouter": "Add",
+		"Ajouter un Musiccast": "Add a Musiccast",
+		"Aucun": "Nothing",
+		"Catégorie": "Category",
+		"Commandes": "Commands",
+		"Configuration": "Configuration",
+		"Configuration avancée": "Advanced configuration",
+		"Equipement": "Equipment",
+		"Gestion": "Management",
+		"Mes Musiccasts": "My Musiccasts",
+		"Nom": "Name",
+		"Nom de l'équipement Musiccast": "Name of the Musiccast equipment",
+		"Objet parent": "Parent object",
+		"Rechercher": "Find",
+		"Sauvegarder": "Save",
+		"Supprimer": "Delete",
+		"Type": "Type",
+		"Visible": "Visible",
+		"Model": "Model",
+		"ip": "IP",
+		"lastCommunication": "Last Update",
+		"lastCallAPI": "Last call API"
+	},
+	"plugins\/YamahaMusiccast\/plugin_info\/configuration.php": {
+		"comment.socket": "The daemon opens a socket which allows the Yahama Musiccast device to communicate with it",
+		"socket.port": "Socket port: ",
+		"socket.port.default": "999"
+	}
+}
