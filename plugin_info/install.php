@@ -50,7 +50,7 @@ function YamahaMusiccast_update() {
 }
 
 function YamahaMusiccast_remove() {
-	$cron = cron::byClassAndFunction('YamahaMusiccastPfr', 'socket_start');
+	$cron = cron::byClassAndFunction('YamahaMusiccast', 'socket_start');
 	if (is_object($cron)) {
 		$cron->remove();
 	}
