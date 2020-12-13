@@ -1,6 +1,6 @@
 {
-  "id": "YamahaMusiccast",
-  "name": "Yamaha musiccast manager",
+  "id": "YamahaMusiccastPfr",
+  "name": "Yamaha musiccast manager Pfr",
   "description": "Plugin permettant la gestion des appareils Yamaha compatible Musiccast",
   "licence": "GNU GPLv2",
   "author": "Luc Guinchard",
