@@ -830,6 +830,10 @@ class YamahaMusiccast extends eqLogic {
 			$unique[] = $device["usn"];
 		}
 		log::add(__CLASS__, 'debug', print_r($return, true));
+		
+		//Ack PFR
+		$return[] ="192.168.123.160";
+		
 		return $return;
 	}
 
