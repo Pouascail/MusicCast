@@ -42,9 +42,9 @@ function YamahaMusiccast_update() {
 	}
 	$name = config::byKey('socket.name', 'YamahaMusiccastPfr');
 	if (empty($name)) {
-		config::save('socket.name', 'musiccastDom', 'YamahaMusiccastPfr');
+		config::save('socket.name', 'musiccastDom', 'YamahaMusiccast');
 	}
-	foreach (YamahaMusiccast::byType('YamahaMusiccastPfr') as $device) {
+	foreach (YamahaMusiccast::byType('YamahaMusiccast') as $device) {
 		$device->save();
 	}
 }
